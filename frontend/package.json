@@ -5,6 +5,13 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "build-for-rails": "vue-cli-service build && yarn delete-old && yarn copy-js && yarn copy-css && yarn copy-img",
+    "copy-js": "cp -f ./dist/js/app.js ../app/assets/javascripts/",
+    "copy-css": "cp -f ./dist/css/app.css ../app/assets/stylesheets/",
+    "copy-img": "mkdir -p ../public/assets/images && cp -f ./dist/assets/images/* ../public/assets/images/ 2>/dev/null || :",
+    "delete-old-js": "cd ../app/assets/javascripts/; ls | grep -v application.js | xargs rm; cd -",
+    "delete-old-css": "cd ../app/assets/stylesheets/; ls | grep -v application.css | xargs rm; cd -",
+    "delete-old": "yarn delete-old-js && yarn delete-old-css",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
