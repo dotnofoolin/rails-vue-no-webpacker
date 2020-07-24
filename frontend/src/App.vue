@@ -1,28 +1,27 @@
 <template>
-  <div id="testapp">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="container">
+    <h3>A Ruby on Rails project that uses Vue.js as its frontend. Avoids webpacker at all costs.</h3>
+    <Example/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Example from './components/Example.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Example
   }
 }
 </script>
 
 <style>
-#testapp {
+#container {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align: left;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
