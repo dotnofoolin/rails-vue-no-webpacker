@@ -10,5 +10,6 @@ Rails.application.routes.draw do
     resources :examples, only: [:index]
   end
 
+  # Any unknown path will redirect and let Vue take over.
   get '*path' => 'frontends#index'
 end
