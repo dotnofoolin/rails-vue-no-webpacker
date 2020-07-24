@@ -11,5 +11,16 @@ module.exports = {
             maxEntrypointSize: 512000,
             maxAssetSize: 512000
         }
+    },
+    chainWebpack: config => {
+        config.module
+            .rule('images')
+            .test(/\.(png|jpe?g|gif)(\?.*)?$/)
+            .use('url-loader')
+            .loader('url-loader')
+            .options({
+                limit: 10000,
+                name: 'assets/images/[name].[ext]'
+            })
     }
 }
