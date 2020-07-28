@@ -4,6 +4,15 @@ Webpacker being a problem? Can't get your favorite Javascript framework to play 
 
 Why not avoid webpacker? Lets do it by building the Javascript app for production, and copying it to the Rails `assets` directories so that Sprockets will pick it up and things like `assets:precompile` will work nicely. Oh, and lets run Rails and the JS app on separate ports during development. Read on...
 
+## I want to clone this and run it now.
+1. Clone it to your localhost. Install yarn and ruby however you wish.
+2. `cd rails-vue-no-webpacker`
+3. `bundle install`
+4. `cd frontend; yarn install; cd ..`
+5. `foreman start`
+6. Visit [localhost:8080](http://localhost:8080) in your browser.
+
+
 ## Howto
 
 - For this example, I ran `rails new rails-vue-no-webpacker --skip-webpack-install --skip-javascript --skip-turbolinks -T` to create the rails app.
