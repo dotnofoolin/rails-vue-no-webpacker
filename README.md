@@ -36,7 +36,7 @@ Why not avoid webpacker? Lets do it by building the Javascript app for productio
     end
     ```
 
-- Create a `Frontends` controller with a blank `index` action. Add `<div id="vue-app"></div>` to its `index.html.erb` file.
+- Create a `Frontends` controller with a blank `index` action. Add `<div id="app"></div>` to its `index.html.erb` file.
 
 - Add some routes. Set the `root` to `frontends#index`. Also add a catch-all that will redirect any unknown routes to the `frontends#index` endpoint so that Vue can take over.
     ```
