@@ -81,6 +81,12 @@ Why not avoid webpacker? Lets do it by building the Javascript app for productio
         }
     }
     ```
+- Don't forget to add the built files from Vue in the Rails assets folder to `.gitignore`. Don't want to commit those (or maybe you do. I don't).
+    ```
+    # Ignore production builds from Vue.
+    app/assets/javascripts/app.js
+    app/assets/stylesheets/app.css
+    ```
 
 ## Running things
 
@@ -102,7 +108,7 @@ Why not avoid webpacker? Lets do it by building the Javascript app for productio
 
 ## A less boring example
 
-- Add an `Examples` controller with an `index` action. Just generate some random values with the `faker` gem and `render json` right there. Don't forget to add a route in `routes.rb`
+- Add an `Examples` controller with an `index` action. Just generate some random values with the `faker` gem and `render json` right there. Don't forget to add a route in `routes.rb`. See `app/controllers/examples_controller.rb` for the code.
   
 - In the Vue app, `yarn add axios`.
 
